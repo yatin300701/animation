@@ -1,0 +1,41 @@
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    border: 2px solid tomato;
+    color: tomato;
+    font-size: 25px;
+    padding: 20px 40px ;
+    background: none;
+    text-transform: capitalize;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.btn:hover{
+    color: white;
+}
+
+.btn::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: tomato;
+    border-radius: 0 0 50% 50%;
+    height: 0%;
+    z-index: -1;
+    transition: all 0.5s;
+}
+.btn:hover::before{
+    height: 170px;
+}

@@ -1,0 +1,59 @@
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+a{
+    color: #ff2;
+    font-size: 25px;
+    background: none;
+    text-transform: capitalize;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    transition: all 0.5s;
+}
+
+a::before,a::after,a span::after, a span::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    transition: all 0.25s;
+}
+a::before{
+    top: 0;
+    left: 0;
+    border-top: solid #ff2;
+}
+a::after{
+    right: 0;
+    top: 0;
+    border-right: solid #ff2;
+}
+a span::after{
+    bottom:0;
+    left: 0;
+    border-left: solid #ff2;
+}
+a span::before{
+    bottom: 0;
+    right: 0;
+    border-bottom: solid #ff2;
+}
+
+a:hover::after,a:hover::before,a:hover span::after, a:hover span::before {
+    width: 100%;
+    height: 100%;
+}
+
+
+

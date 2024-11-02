@@ -1,0 +1,16 @@
+body{
+    perspective: 1000px; /* need to set it in parent for the tag using 3d transform*/
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 350px;
+    height: 250px;
+    transition: all 2s;
+}
+img:hover{
+    transform: translateZ(100px);
+}

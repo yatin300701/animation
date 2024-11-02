@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+img{
+    height: 200px;
+    width: 350px;
+    transition: transform 1s;
+    transform-origin: top left; /* it can be in % , px and (top | right | left | bottom | center) */
+}
+img:hover{
+    transform: rotate(45deg);
+}
