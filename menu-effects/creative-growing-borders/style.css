@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(208, 208, 92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: #222;
+    position: relative;
+}
+
+nav a::before{
+   content: '';
+   width: 0%;
+   position: absolute;
+   height: 100%;
+   top: -10px;
+   left: -10%;
+   border-top: 1px solid #222;
+   transition: all 0.3s ease-in-out  0s;
+}
+
+nav a:hover::before{
+   width: 120%;
+}
+
+nav a::after{
+   content: '';
+   width: 0%;
+   position: absolute;
+   height: 100%;
+   bottom: -10px;
+   right: -10%;
+   transition: all 0.3s ease-in-out ;
+   border-bottom: 1px solid #222;
+}
+
+nav a:hover::after{
+   width: 120%;
+}
+

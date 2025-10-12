@@ -1,0 +1,53 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: #222;
+    position: relative;
+    padding: 4px 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+nav a .one, nav a .two, nav a .three, nav a .four{
+    z-index: -1;
+    position: absolute;
+    width: 25%;
+    height: 0%;
+    left: 0px;
+    top: 0px;
+    background-color: #222;
+    transition: all 0.3s ease-in-out;
+
+}
+nav a .two{
+    left: 25%;
+    transition-delay: 0.1s;
+}
+nav a .three{
+    left: 50%;
+    transition-delay: 0.2s;
+}
+nav a .four{
+    left: 75%;
+    transition-delay: 0.3s;
+}
+
+nav a:hover .one, nav a:hover .two, nav a:hover .three, nav a:hover .four{
+    height: 100%;
+}
