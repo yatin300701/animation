@@ -1,0 +1,67 @@
+body {
+  background-color: rgb(208, 208, 92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: #222;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a::before {
+  content: "";
+  width: 120%;
+  height: 200%;
+  position: absolute;
+  left: -10%;
+  top: -50%;
+  background-color: transparent;
+  border: 1px solid #222;
+  border-right: none;
+  border-left: none;
+  transform: scale(1.4);
+  opacity: 0;
+  transform-origin: center;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: right;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 140%;
+  top: -20%;
+  left: -10%;
+  z-index: -1;
+  background-color: #222;
+  transform: scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
